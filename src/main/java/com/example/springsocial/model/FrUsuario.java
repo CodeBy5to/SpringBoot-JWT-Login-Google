@@ -168,9 +168,21 @@ public class FrUsuario implements Serializable {
     @NotNull
     @Column(name = "email_verified")
     private boolean emailVerified;
+    
+    @NotNull
+    @Column(name = "verified_account")
+    private int verifiedAccount;
    
 
-    public FrUsuario() {
+    public int getVerifiedAccount() {
+		return verifiedAccount;
+	}
+
+	public void setVerifiedAccount(int verifiedAccount) {
+		this.verifiedAccount = verifiedAccount;
+	}
+
+	public FrUsuario() {
     }
 
     public FrUsuario(Long idUsuario) {
